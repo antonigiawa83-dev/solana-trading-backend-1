@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/go:1-1.21-bullseye
+    volumes:
+      - ..:/workspace:cached
+    network_mode: service:db
+    depends_on:
+      - db
+
+  db:
+    image: mongodb/mongodb-community-server:latest
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
