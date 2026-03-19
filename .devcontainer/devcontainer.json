@@ -1,0 +1,24 @@
+{
+    "name": "Go, MongoDB & Solana Dev Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go",
+                "rust-lang.rust-analyzer",
+                "mongodb.mongodb-vscode",
+                "tamasfe.even-better-toml",
+                "ethan-id.solidity-visual-auditor",
+                "fill-labs.solana-validator-status"
+            ]
+        }
+    },
+    "remoteUser": "vscode",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "configureZsh": true
+        }
+    }
+}
